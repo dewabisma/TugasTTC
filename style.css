@@ -115,7 +115,7 @@ textarea {
 
 .logo {
     display: flex;
-    margin-left: 4rem;
+    margin-left: 7%;
     justify-self: flex-start;
     align-self: center;
 }
@@ -160,7 +160,7 @@ textarea {
     height: 400px;
     display: flex;
     position: relative;
-    padding-left: 4rem;
+    padding-left: 4%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -183,7 +183,7 @@ textarea {
 
 .wrap-content {
     display: flex;
-    padding: 0 4rem;
+    padding: 0 4%;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
@@ -207,13 +207,13 @@ textarea {
 
 .showcase-item:first-child {
     background-color: #f3f3f3;
-    padding: 4rem;
+    padding: 2rem 4%;
     padding-top: 3rem;
 }
 
 .showcase-item:last-child {
     background-color: #f7f7f7;
-    padding: 4rem;
+    padding: 2rem 4%;
     padding-top: 3rem;
 }
 
@@ -231,7 +231,7 @@ textarea {
 .card-item {
     display: flex;
     color: #cccccc;
-    padding: 4rem;
+    padding: 11% 11%;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
@@ -241,7 +241,7 @@ textarea {
 
 .wrap-footer {
     background-color: #e6474b;
-    padding:4rem 4rem 2rem 4rem;
+    padding: 4rem 3.5% 2rem 3.5%;
     color: #fff;
     text-transform: uppercase;
 }
