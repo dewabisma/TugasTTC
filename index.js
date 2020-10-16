@@ -3,18 +3,31 @@ const form = document.querySelector(".form");
 const formName = document.querySelector("#name");
 const formEmail = document.querySelector("#email");
 const formMessage = document.querySelector("#message");
-const formBtn = document.querySelector(".form button");
 
 // Events
-formBtn.addEventListener('click', (event) => {
+form.addEventListener('submit', event => {
     event.preventDefault();
-    if (true) {
+    console.log("1234 test")
+    if (form.checkValidity()) {
         const formData = {
             name: formName.value,
             email: formEmail.value,
             message: formMessage.value
         }
         console.log(formData);
+
+        fetch('http://localhost:3000/messages',{
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify(formData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert("Thank you for contacting us!");d
+            window.location.reload();
+        })
+        .catch(error => console.log(error));
     }
-    
 })
