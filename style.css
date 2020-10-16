@@ -63,6 +63,10 @@ textarea {
     display: inline-block;
 }
 
+.hide {
+    display: none;
+}
+
 .credit {
     margin-left: 4rem;
     color: rgba(211, 211, 211, 0.507);
@@ -133,8 +137,21 @@ textarea {
     font-size: 1rem;
 }
 
+.hovering-menu {
+    background-color:#1c1c1c;
+    height: 2rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.hovering-menu li {
+    margin-right: 1%;
+}
+
 .bars-menu {
     display: none;
+    cursor: pointer;
 }
 
 /* Hero Banner */
@@ -207,7 +224,8 @@ textarea {
 /* Cards */
 
 .wrap-card {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .card-item {
@@ -288,6 +306,6 @@ textarea {
     }
 
     .wrap-card {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
