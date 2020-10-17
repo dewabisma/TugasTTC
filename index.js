@@ -13,7 +13,8 @@ window.onload = () => {
 
 // function
 const fetchApi = () => {
-    fetch(`http://localhost:3000/messages?_limit=3`).
+    
+    fetch(`http://localhost:3000/messages?_page=1&_limit=3`).
     then(response => response.json()).
     then(data => {
         data.forEach(val => {
@@ -52,14 +53,12 @@ const createCard = (name, email, id = '') => {
 // Events
 form.addEventListener('submit', event => {
     event.preventDefault();
-    console.log("1234 test")
     if (form.checkValidity()) {
         const formData = {
             name: formName.value,
             email: formEmail.value,
             message: formMessage.value
         }
-        console.log(formData);
 
         fetch('http://localhost:3000/messages',{
             method: "POST",
@@ -70,7 +69,7 @@ form.addEventListener('submit', event => {
         })
         .then(response => response.json())
         .then(data => {
-            alert("Thank you for contacting us!");d
+            alert("Thank you for contacting us!");
             window.location.reload();
         })
         .catch(error => console.log(error));
